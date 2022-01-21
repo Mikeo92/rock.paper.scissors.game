@@ -1,18 +1,9 @@
 let playerChoice = prompt("Enter Rock,Paper or Scissors", "ENTER TEXT HERE");
 playerChoice = playerChoice.toUpperCase();
-
-// console.log(playerChoice);
-// if (playerChoice === "ROCK");
-// else if (playerChoice === "PAPER");
-// else if (playerChoice === "SCISSORS");  
-// else {prompt("ERROR PLEASE TRY AGAIN");}
-
-
-
-let computer = computerPlay()
-let player = playerSelection()
-console.log("COMPUTER:" + " " + computer)
-console.log("PLAYER:" + " " + player)
+let computer = computerPlay();
+let player = playerSelection();
+console.log("COMPUTER:" + " " + computer);
+console.log("PLAYER:" + " " + player);
 
 
 function computerPlay(computer){
@@ -22,43 +13,34 @@ function computerPlay(computer){
    let computerResults = Math.floor(Math.random(3)*3 + 1);    
     
     if (computerResults === 1) {        
-        return "ROCK" 
+        return "ROCK"; 
     }
     else if (computerResults === 2) {       
-        return "PAPER"
+        return "PAPER";
     }
     else 
-        return "SCISSORS"    
+        return "SCISSORS";    
 }
 
 computerPlay()
 
-function playerSelection(player) {
-    // let playerChoice = prompt("Enter Rock,Paper or Scissors", "ENTER TEXT HERE IN CAPS");
-    // playerChoice = playerChoice.toUpperCase();
-   
-    // console.log(playerChoice);
+function playerSelection(player) {  
+
     let playerResults = playerChoice
-//     let rock = 1
-//    let paper = 2
-//    let scissors = 3 
-//    let playerResults = Math.floor(Math.random(3)*3 + 1);    
 
      if (playerResults === "ROCK") {        
-       return "ROCK"
+       return "ROCK";
     }
      else if (playerResults === "PAPER"){        
-        return "PAPER"
+        return "PAPER";
     }
      else if (playerResults === "SCISSORS"){
-        return "SCISSORS"
+        return "SCISSORS";
     }     
      else  playerResults = prompt("ERROR TRY AGAIN", "ENTER TEXT HERE");    
         return playerResults = playerResults.toUpperCase();
     
 }
-
-// playerSelection()
 
 function winner() {
      if (computer === player){
